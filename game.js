@@ -8,7 +8,7 @@ let randomNumber =(min, max)=> {
 
 // ==========================================================
 
-let reply = prompt("Do you want to play a game?");
+let reply = prompt("Do you want to play a game? Please enter yes or no");
 
 if (reply.toLocaleLowerCase() === "yes") {
   let playerName = prompt("What is your name?");
@@ -46,4 +46,4 @@ if (reply.toLocaleLowerCase() === "yes") {
   }
 }  else {
     console.log("Didn't want to play with you anyways!")
-}
+} 
