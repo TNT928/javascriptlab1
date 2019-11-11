@@ -10,8 +10,9 @@ if (reply.toLocaleLowerCase() === "yes") {
   while (playerHealth > 0 && grantDeath < 3) {
       
     let attack = Math.floor(Math.random() * 2) + 1;
+    let punsishment = Math.floor(Math.random() * 1) + 2;
     grantRemainingHealth = grantHealth - attack;
-    playerRemainingHealth = playerHealth - attack;
+    playerRemainingHealth = playerHealth - punsishment;
 
     console.log(
       `Grant has ${grantRemainingHealth} hit points remaining. ${playerName} has ${playerRemainingHealth} hit points remaining.`
