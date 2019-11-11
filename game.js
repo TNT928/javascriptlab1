@@ -1,18 +1,28 @@
+/**
+ * 
+ * @param randomNumber calculates a random number between 2 numbers. 
+ */
+let randomNumber =(min, max)=> {
+    return Math.floor(Math.random() * (max - min + 1) ) + min;
+  }
+
+// ==========================================================
+
 let reply = prompt("Do you want to play a game?");
 
 if (reply.toLocaleLowerCase() === "yes") {
   let playerName = prompt("What is your name?");
-  console.log("Welcome to the match");
+  console.log(`Welcome to the match, Grant has 10 hit points to start. ${playerName} has 40 hit points to start. `);
   let playerHealth = 40;
   let grantHealth = 10;
   let grantDeath = 0;
 
   while (playerHealth > 0 && grantDeath < 3) {
       
-    let attack = Math.floor(Math.random() * 2) + 1;
-    let punsishment = Math.floor(Math.random() * 1) + 2;
+    let attack = randomNumber(1,2);
+    let attack1= randomNumber(1,2);
     grantRemainingHealth = grantHealth - attack;
-    playerRemainingHealth = playerHealth - punsishment;
+    playerRemainingHealth = playerHealth - attack1;
 
     console.log(
       `Grant has ${grantRemainingHealth} hit points remaining. ${playerName} has ${playerRemainingHealth} hit points remaining.`
@@ -37,5 +47,3 @@ if (reply.toLocaleLowerCase() === "yes") {
 }  else {
     console.log("Fine be that way!")
 }
-
-
