@@ -45,5 +45,5 @@ if (reply.toLocaleLowerCase() === "yes") {
     }
   }
 }  else {
-    console.log("Fine be that way!")
+    console.log("Didn't want to play with you anyways!")
 }
